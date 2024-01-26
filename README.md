@@ -8,4 +8,18 @@ Assumptions must be made because we want tailor prior data to become as represen
 
 Measuring Average Treatment Effect (ATE) is useful to make decisions on a population, and Conditional Average Treatment Effect (CATE) is useful to make decision on subsets of the population. When CATE is different, there is treatment heterogeneity. 
 
-## Difference-in-Difference (DiD)
+## Difference-in-Difference (DiD)  
+Instead of simply calculating the difference in averages (given that it is important to account for possible different starting points, like the treatment group already has higher number of hateful content), DiD helps identify the treatment effect as thedifference in changes over time across groups.  
+
+A=control (cluster 1 control), B=treatment (cluster 1)  
+1=pre-treatment (pre-disruption), 2=post-treatment (post-disruption)  
+
+δ<sub>DD</sub> = (Ȳ<sub>B,2</sub> - Ȳ<sub>A,2</sub>)-(Ȳ<sub>B,1</sub> - Ȳ<sub>A,1</sub>) = Effect of treatment on outcome  
+(Ȳ<sub>B,2</sub> - Ȳ<sub>A,2</sub>)=difference across types "after" treatment  
+(Ȳ<sub>B,1</sub> - Ȳ<sub>A,1</sub>)=difference across types "before" treatment  
+
+δ<sub>DD</sub> = (Ȳ<sub>B,2</sub> - Ȳ<sub>B,1</sub>)-(Ȳ<sub>A,2</sub> - Ȳ<sub>A,1</sub>) = Average Treatment Effect  
+(Ȳ<sub>B,2</sub> - Ȳ<sub>B,1</sub>)=treatment impact on "treated"    
+(Ȳ<sub>A,2</sub> - Ȳ<sub>A,1</sub>)=treatment impact on "control"    
+
+OLS (Ordinary Least Square) estimate of DiD is common method used to estimate the treatment effect in DiD analysis.
